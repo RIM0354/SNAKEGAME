@@ -1,0 +1,92 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  background: #000;
+  font-family: system-ui, sans-serif;
+}
+
+.panneau-reglages {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 290px;
+  max-height: calc(100vh - 28px);
+  overflow-y: auto;
+  padding: 10px 14px;
+  background: rgba(0, 12, 14, 0.85);
+  border: 1px solid rgba(0, 220, 180, 0.7);
+  border-radius: 8px;
+  color: #c8fff2;
+  font-size: 12px;
+  box-shadow: 0 0 18px rgba(0, 220, 180, 0.25);
+}
+
+.panneau-reglages.cache {
+  display: none;
+}
+
+.panneau-reglages h2 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #00dcb4;
+}
+
+.panneau-reglages h2 small {
+  font-size: 10px;
+  color: #7aa;
+  font-weight: normal;
+}
+
+.panneau-reglages h3 {
+  margin: 10px 0 4px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffe600;
+}
+
+.ligne-reglage {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.ligne-reglage input[type="range"] {
+  grid-column: 1 / 3;
+  width: 100%;
+  accent-color: #00dcb4;
+}
+
+.ligne-reglage input[type="checkbox"],
+.ligne-reglage input[type="color"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.ligne-reglage .valeur {
+  color: #ffe600;
+  font-variant-numeric: tabular-nums;
+}
+
+.panneau-reglages button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 6px;
+  background: transparent;
+  color: #00dcb4;
+  border: 1px solid #00dcb4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.panneau-reglages :focus-visible {
+  outline: 2px solid #ffe600;
+}
